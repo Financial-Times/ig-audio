@@ -1,7 +1,7 @@
 /*global describe, it, beforeEach, afterEach */
 
 import expect from 'expect';
-import AudioPlayer from './../src/js/audio';
+import AudioPlayer from './../src/js/audio.js';
 
 describe('AudioPlayer API', () => {
 	it('is defined', () => {
