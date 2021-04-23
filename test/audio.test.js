@@ -1,11 +1,11 @@
 /*global describe, it, beforeEach, afterEach */
 
-import expect from 'expect';
+import proclaim from 'proclaim';
 import AudioPlayer from './../src/js/audio.js';
 
 describe('AudioPlayer API', () => {
 	it('is defined', () => {
-		expect(AudioPlayer).toBeA('function');
+		proclaim.isFunction(AudioPlayer);
 	});
 });
 
@@ -35,8 +35,8 @@ describe('AudioPlayer instance', () => {
 		const audioURL = a.getElementsByTagName('source')[0].getAttribute('src');
 		const player = new AudioPlayer(a, audioURL);
 
-		expect(player).toBeA(AudioPlayer);
-		expect(a).toBe(audioElement);
-		expect(audioURL).toBe(testAudioURL);
+		proclaim.isInstanceOf(player, AudioPlayer);
+		proclaim.deepStrictEqual(a, audioElement);
+		proclaim.deepStrictEqual(audioURL, testAudioURL);
 	});
 });
