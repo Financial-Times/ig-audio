@@ -1,4 +1,4 @@
-import AudioPlayer from './src/js/audio';
+import AudioPlayer from './src/js/audio.js';
 
 const constructAll = () => {
 	const audio_components = document.querySelectorAll('.g-audio');

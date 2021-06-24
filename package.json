@@ -1,19 +1,41 @@
 {
-  "private": true,
-  "devDependencies": {
-    "babel-preset-es2015": "^6.18.0",
-    "babelify": "^7.3.0",
-    "browserify": "^13.1.1",
-    "expect": "^1.20.2",
-    "karma": "^1.3.0",
-    "karma-babel-preprocessor": "^6.0.1",
-    "karma-browserify": "^5.1.0",
-    "karma-firefox-launcher": "^1.0.0",
-    "karma-mocha": "^1.3.0",
-    "mocha": "^3.2.0",
-    "watchify": "^3.7.0"
-  },
-  "scripts": {
-    "test": "./node_modules/karma/bin/karma start karma.conf.js"
-  }
+	"name": "@financial-times/g-audio",
+	"version": "0.0.0-0",
+	"description": "IG audio player module",
+	"keywords": [
+		"audio",
+		"graphics",
+		"multimedia"
+	],
+	"homepage": "https://registry.origami.ft.com/components/g-audio",
+	"bugs": {
+		"url": "https://registry.origami.ft.com/components/g-audio"
+	},
+	"license": "MIT",
+	"type": "module",
+	"browser": "main.js",
+	"scripts": {
+		"start": "npx serve ./demos/local",
+		"build": "npm_config_yes=true npx \"origami-build-tools@prerelease\" install && npm_config_yes=true npx \"origami-build-tools@prerelease\" demo"
+	},
+	"devDependencies": {
+		"eslint": "^7.24.0",
+		"eslint-config-origami-component": "^2.1.1",
+		"proclaim": "^3.6.0",
+		"remark": "^13.0.0",
+		"remark-lint": "^7.0.1",
+		"remark-preset-lint-origami-component": "prerelease",
+		"stylelint": "^13.12.0",
+		"stylelint-config-origami-component": "^1.0.4"
+	},
+	"peerDependencies": {
+		"@financial-times/o-icons": "prerelease"
+	},
+	"engines": {
+		"npm": "^7"
+	},
+	"volta": {
+		"node": "14.16.1",
+		"npm": "7.11.1"
+	}
 }
